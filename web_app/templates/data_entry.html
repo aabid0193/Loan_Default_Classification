@@ -1,0 +1,148 @@
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Loan Info: Analysis</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+	<!-- Theme CSS -->
+	<link href="static/styles/grayscale.min.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+					<i class="fa fa-play-circle"></i> <span class="light">Data Entry</span>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li>
+						<a class="page-scroll" href="https://aabid0193.github.io/">About Ahmed</a>
+					</li>
+					<li>
+                  		<a class="page-scroll" href="/">Back to Main Page</a>
+              	    </li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+
+	<style type="text/css">
+    .container {
+        width: 500px;
+        clear: both;
+    }
+    .container input {
+        width: 100%;
+        clear: both;
+    }
+
+    </style>
+      <div class="container">
+      <form action = "http://127.0.0.1:5000/predict" method = "POST">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p align="center"> <strong>Please complete the following form: </strong></p>
+      <br>
+      <br>
+         <p>Interest Rate<input type = "text" name = "int_rate" style="color:#FF0000;"/></p>
+         <p>DTI<input type = "text" name = "dti_log" style="color:#FF0000;" /></p>
+         <p>60 Month Loan (1 or 0)<input type = "text" name = "term_ 60 months" style="color:#FF0000;" /></p>
+         <p>Annual Income<input type ="text" name = "annual_inc_log"  style="color:#FF0000;"/></p>
+         <p>Total open to buy on revolving bankcards<input type = "text" name = "bc_open_to_buy_log" style="color:#FF0000;"/></p>
+         <p>Revolving line utilization rate<input type = "text" name = "revol_util" style="color:#FF0000;"/></p>
+         <p>Monthly payment owed by borrower<input type = "text" name = "installment" style="color:#FF0000;"/></p>
+         <p>Average current balance of all accounts<input type = "text" name = "avg_cur_bal_log" style="color:#FF0000;"/></p>
+         <p>Total high credit/credit limit<input type = "text" name = "tot_hi_cred_lim_log" style="color:#FF0000;"/></p>
+         <p>Total credit revolving balance<input type = "text" name = "revol_bal_log" style="color:#FF0000;"/></p>
+         <p>Total current balance of all accounts<input type = "text" name = "tot_cur_bal_log" style="color:#FF0000;"/></p>
+         <p>Loan Amount<input type = "text" name = "loan_amnt" style="color:#FF0000;"/></p>
+         <p>Months since oldest revolving account opened<input type = "text" name = "mo_sin_old_rev_tl_op" style="color:#FF0000;"/></p>
+         <p>Total credit balance excluding mortgage<input type = "text" name = "total_bal_ex_mort_log" style="color:#FF0000;"/></p>
+         <p>The total number of credit lines currently in the borrower's credit file<input type = "text" name = "total_acc" style="color:#FF0000;"/></p>
+         <p>Months since oldest bank installment account opened<input type = "text" name = "mo_sin_old_il_acct" style="color:#FF0000;"/></p>
+         <p>Months since most recent bankcard account opened.<input type = "text" name = "mths_since_recent_bc_log" style="color:#FF0000;"/></p>
+         <p>Number of trades opened in past 24 months.<input type = "text" name = "acc_open_past_24mths" style="color:#FF0000;"/></p>
+         <p>Months since most recent account opened<input type = "text" name = "mo_sin_rcnt_tl_log" style="color:#FF0000;"/></p>
+         <p>Months since most recent revolving account opened<input type = "text" name = "mo_sin_rcnt_rev_tl_op_log" style="color:#FF0000;"/></p>
+         <p>The number of months since the borrower's last delinquency.<input type = "text" name = "mths_since_last_delinq" style="color:#FF0000;"/></p>
+         <p>Months since most recent inquiry<input type = "text" name = "mths_since_recent_inq_log" style="color:#FF0000;"/></p>
+         <p>Number of bankcard accounts<input type = "text" name = "num_bc_tl" style="color:#FF0000;"/></p>
+				 <p>The upper boundary range the borrowers FICO at loan origination belongs to<input type = "text" name = "fico_range_low" style="color:#FF0000;"/></p>
+				 <p>The lower boundary range the borrowers FICO at loan origination belongs to<input type = "text" name = "fico_range_high" style="color:#FF0000;"/></p>
+				 <p>Ratio of total current balance to high credit/credit limit on all install acct<input type = "text" name = "il_util" style="color:#FF0000;"/></p>
+				 <p>Maximum current balance owed on all revolving accounts<input type = "text" name = "max_bal_bc_log" style="color:#FF0000;"/></p>
+
+				 <p><input type="submit" style="font-face: 'Comic Sans MS'; font-size: larger; color: teal; background-color: #FFFFC0; border: 3pt ridge lightgrey" value=" Get Results! "/></p>
+      </form>
+    <section id="about" class="container content-section text-center">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+
+				<p>This flask webpage was created for Project McNulty @ <a href="https://www.thisismetis.com">Metis.</a> </p>
+				<br>
+				<p>You can find my github repo <a href="http://github.com/aabid0193/">here</a>.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container text-center">
+			<p>Copyright &copy; Ahmed Abid - Data Scientist 2018</p>
+		</div>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="static/vendor/jquery/jquery.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+	<!-- Theme JavaScript -->
+	<script src="static/styles/grayscale.min.js"></script>
+
+</body>
+
+</html>
